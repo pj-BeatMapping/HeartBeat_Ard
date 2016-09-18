@@ -32,13 +32,15 @@ void loop() {
       // デバッグ用にシリアルコンソールに出力 
     //  Serial.print(count,DEC);
     //  Serial.println();
+    
       
       unsigned int send_data;
 
-      send_data = count;
+      send_data = count; //ここはオーバーワークかもれない。シリアル通信の規格をもう少し近い出来たら簡略化を試みる。
       
+      Serial.write(send_data); //シリアル通信(送信)
+
       
-      Serial.write(send_data);
 
       
       }
